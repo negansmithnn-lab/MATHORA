@@ -1,0 +1,330 @@
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&family=Press+Start+2P&display=swap');
+
+
+@font-face {
+    font-family: 'Rooyin';
+    src: url('fonts/RooyinFree-Regular.woff2') format('woff2');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Rooyin';
+    src: url('fonts/RooyinFree-Bold.woff2') format('woff2');
+    font-weight: 700;
+}
+
+:root {
+    --black: #111111;
+    --gray: #777777;
+    --light: #f5f5f5;
+    --border: #e8e8e8;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Press Start 2P', 'Vazirmatn', sans-serif;
+    background: #ffffff;
+    color: var(--black);
+    line-height: 1.8;
+}
+
+/* Background pattern */
+
+body {
+    position: relative;
+    isolation: isolate;
+}
+
+body::before {
+    content: "π       √       ∑       ∞       ÷       ×       α       β       θ       ∫";
+    position: fixed;
+    inset: -20px;
+    z-index: -1;
+    color: #777777;
+    opacity: 0.075;
+    font-family: 'Vazirmatn', sans-serif;
+    font-size: 32px;
+    line-height: 3.5;
+    letter-spacing: 12px;
+    word-spacing: 25px;
+    white-space: pre-wrap;
+    overflow: hidden;
+    pointer-events: none;
+    transform: rotate(-8deg) scale(1.15);
+}
+
+/* Navbar */
+
+.navbar {
+    height: 85px;
+    padding: 0 9%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--border);
+    background: rgba(255,255,255,0.92);
+}
+
+.logo {
+    color: var(--black);
+    text-decoration: none;
+    font-size: 27px;
+    font-weight: 800;
+    letter-spacing: -1px;
+}
+
+.logo span {
+    color: #888888;
+}
+
+.navbar nav {
+    display: flex;
+    gap: 35px;
+}
+
+.navbar nav a {
+    color: #444444;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.navbar nav a:hover {
+    color: #999999;
+}
+
+/* Hero */
+
+.hero {
+    min-height: 540px;
+    padding: 100px 12%;
+    display: flex;
+    align-items: center;
+}
+
+.hero-content {
+    max-width: 650px;
+}
+
+.tag {
+    display: inline-block;
+    font-size: 11px;
+    letter-spacing: 4px;
+    font-weight: 700;
+    color: #777777;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: clamp(38px, 6vw, 65px);
+    line-height: 1.5;
+    font-weight: 800;
+}
+
+.hero h1 span {
+    color: #888888;
+}
+
+.hero p {
+    color: var(--gray);
+    font-size: 16px;
+    margin: 20px 0 30px;
+    max-width: 450px;
+}
+
+.main-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 20px;
+    padding: 13px 25px;
+    background: var(--black);
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.main-button:hover {
+    background: #444444;
+    transform: translateY(-3px);
+}
+
+/* Grades */
+
+.grades {
+    padding: 85px 9%;
+    background: #fafafa;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.section-heading > span {
+    font-size: 11px;
+    letter-spacing: 4px;
+    color: #888888;
+    font-weight: 700;
+}
+
+.section-heading h2 {
+    font-size: 27px;
+    margin: 12px 0;
+}
+
+.section-heading p {
+    color: var(--gray);
+    font-size: 14px;
+}
+
+.grade-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.grade-card {
+    min-height: 190px;
+    background: white;
+    border: 1px solid var(--border);
+    padding: 25px;
+    text-decoration: none;
+    color: var(--black);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: 0.3s;
+}
+
+.grade-card:hover {
+    border-color: #111111;
+    transform: translateY(-6px);
+}
+
+.grade-number {
+    font-size: 42px;
+    font-weight: 800;
+    color: #e1e1e1;
+    line-height: 1;
+}
+
+.grade-card h3 {
+    font-size: 20px;
+}
+
+.grade-card p {
+    color: var(--gray);
+    font-size: 13px;
+}
+
+.arrow {
+    align-self: flex-end;
+    font-size: 23px;
+}
+
+/* About */
+
+.about {
+    padding: 90px 20px;
+    text-align: center;
+}
+
+.about h2 {
+    font-size: 27px;
+    margin-bottom: 15px;
+}
+
+.about p {
+    color: var(--gray);
+    font-size: 14px;
+}
+
+/* Footer */
+
+footer {
+    padding: 30px 9%;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer p {
+    color: var(--gray);
+    font-size: 12px;
+}
+
+/* Mobile */
+
+@media (max-width: 750px) {
+    .navbar {
+        padding: 0 5%;
+        height: 75px;
+    }
+
+    .navbar nav {
+        gap: 13px;
+    }
+
+    .navbar nav a {
+        font-size: 11px;
+    }
+
+    .logo {
+        font-size: 21px;
+    }
+
+    .hero {
+        min-height: 470px;
+        padding: 70px 8%;
+    }
+
+    .grades {
+        padding: 65px 7%;
+    }
+
+    .grade-container {
+        grid-template-columns: 1fr;
+    }
+
+    .section-heading h2 {
+        font-size: 22px;
+    }
+
+    footer {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+}
+
+
+
+/* Creator credit */
+.creator-credit {
+    text-align: center;
+    padding: 14px 8px;
+    font-family: 'Press Start 2P', monospace;
+    font-size: 9px;
+    color: #777;
+    direction: ltr;
+    border-bottom: 1px solid #e8e8e8;
+}
+
+@media (max-width: 500px) {
+    .creator-credit {
+        font-size: 7px;
+    }
+}
